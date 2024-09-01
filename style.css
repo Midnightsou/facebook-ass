@@ -4,35 +4,48 @@ body {
   background: #f0f2f5;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .box {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
 }
+
 .title-box {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  margin-bottom: 20px;
 }
+
 .title-box img {
-  width: 235px;
+  width: 80%;
+  max-width: 235px;
   margin-bottom: -10px;
 }
+
 .title-box p {
   color: #000;
-  font-size: 26px;
+  font-size: 22px;
   font-weight: normal;
-  line-height: 32px;
+  line-height: 28px;
 }
+
 .form-box {
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   padding: 15px;
   text-align: center;
   border-radius: 5px;
-  background: #f0f2f5;
-  margin-left: 60px;
-  box-shadow: 0px 2px 10px 1px rgba(71, 71, 0.52);
+  background: #fff;
+  box-shadow: 0px 2px 10px 1px rgba(71, 71, 71, 0.52);
 }
+
 .form-box input {
   width: 100%;
   margin-bottom: 15px;
@@ -43,9 +56,11 @@ body {
   border-radius: 5px;
   outline: none;
 }
+
 .form-box input:focus {
   box-shadow: 0px 0px 1px 1px rgb(22, 111, 229);
 }
+
 .form-box button {
   width: 100%;
   margin-bottom: 15px;
@@ -58,9 +73,11 @@ body {
   cursor: pointer;
   background: #166fe5;
 }
+
 .form-box button:hover {
   background: #1877f2;
 }
+
 .form-box a {
   color: #166fe5;
   font-size: 14px;
@@ -69,13 +86,16 @@ body {
   margin-bottom: 20px;
   display: block;
 }
+
 .form-box a:hover {
   text-decoration: underline;
 }
+
 .form-box hr {
   border: 1px solid #dadde1;
   margin-bottom: 15px;
 }
+
 .form-box .create-btn a {
   color: #fff;
   font-size: 16px;
@@ -84,9 +104,68 @@ body {
   border-radius: 5px;
   background: #36a420;
   font-weight: 600;
-  display: inline;
+  display: inline-block;
   margin-bottom: 5px;
 }
+
 .form-box .create-btn a:hover {
-background: #42b72a;
+  background: #42b72a;
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 768px) {
+  .box {
+    flex-direction: row;
+  }
+
+  .title-box, .form-box {
+    margin: 0 20px;
+  }
+
+  .title-box {
+    margin-right: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .title-box p {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .form-box input {
+    font-size: 16px;
+  }
+
+  .form-box button {
+    font-size: 18px;
+    padding: 10px 0;
+  }
+
+  .form-box .create-btn a {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-box p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .form-box input {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .form-box button {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+
+  .form-box .create-btn a {
+    font-size: 12px;
+    padding: 10px 10px;
+  }
 }
